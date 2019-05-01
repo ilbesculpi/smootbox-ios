@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1961397D2279E17500BE6FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961397C2279E17500BE6FD1 /* AppDelegate.swift */; };
-		1961397F2279E17500BE6FD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961397E2279E17500BE6FD1 /* ViewController.swift */; };
 		196139822279E17500BE6FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196139802279E17500BE6FD1 /* Main.storyboard */; };
 		196139842279E17700BE6FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 196139832279E17700BE6FD1 /* Assets.xcassets */; };
 		196139872279E17700BE6FD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196139852279E17700BE6FD1 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,8 @@
 		196139AB2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */; };
 		196139AC2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */; };
 		196139AD2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */; };
+		196139B22279F3C400BE6FD1 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B12279F3C400BE6FD1 /* LandingViewController.swift */; };
+		196139B52279F4A600BE6FD1 /* UIStoryboard_Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B42279F4A600BE6FD1 /* UIStoryboard_Navigation.swift */; };
 		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
 		CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */; };
 		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
@@ -43,7 +44,6 @@
 		04F9D748F267AE1333798586 /* Pods-SmootBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		196139792279E17500BE6FD1 /* SmootBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmootBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1961397C2279E17500BE6FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1961397E2279E17500BE6FD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		196139812279E17500BE6FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		196139832279E17700BE6FD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		196139862279E17700BE6FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		1961399C2279E17700BE6FD1 /* SmootBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmootBoxUITests.swift; sourceTree = "<group>"; };
 		1961399E2279E17700BE6FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		196139B12279F3C400BE6FD1 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		196139B42279F4A600BE6FD1 /* UIStoryboard_Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard_Navigation.swift; sourceTree = "<group>"; };
 		260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,9 +120,9 @@
 		1961397B2279E17500BE6FD1 /* SmootBox */ = {
 			isa = PBXGroup;
 			children = (
+				196139AE2279F38E00BE6FD1 /* UI */,
 				196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */,
 				1961397C2279E17500BE6FD1 /* AppDelegate.swift */,
-				1961397E2279E17500BE6FD1 /* ViewController.swift */,
 				196139802279E17500BE6FD1 /* Main.storyboard */,
 				196139832279E17700BE6FD1 /* Assets.xcassets */,
 				196139852279E17700BE6FD1 /* LaunchScreen.storyboard */,
@@ -145,6 +147,39 @@
 				1961399E2279E17700BE6FD1 /* Info.plist */,
 			);
 			path = SmootBoxUITests;
+			sourceTree = "<group>";
+		};
+		196139AE2279F38E00BE6FD1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				196139AF2279F39800BE6FD1 /* Controllers */,
+				196139B32279F47E00BE6FD1 /* Navigation */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		196139AF2279F39800BE6FD1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				196139B02279F39E00BE6FD1 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		196139B02279F39E00BE6FD1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				196139B12279F3C400BE6FD1 /* LandingViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		196139B32279F47E00BE6FD1 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				196139B42279F4A600BE6FD1 /* UIStoryboard_Navigation.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
@@ -337,6 +372,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-SmootBox/Pods-SmootBox-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -346,6 +383,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -405,7 +444,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1961397F2279E17500BE6FD1 /* ViewController.swift in Sources */,
+				196139B22279F3C400BE6FD1 /* LandingViewController.swift in Sources */,
+				196139B52279F4A600BE6FD1 /* UIStoryboard_Navigation.swift in Sources */,
 				1961397D2279E17500BE6FD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,7 @@ target 'SmootBox' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'PromisesSwift'
   
 
   target 'SmootBoxTests' do

@@ -74,12 +74,16 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - PromisesObjC (1.2.7)
+  - PromisesSwift (1.2.7):
+    - PromisesObjC (= 1.2.7)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - PromisesSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -96,6 +100,8 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PromisesObjC
+    - PromisesSwift
 
 SPEC CHECKSUMS:
   Firebase: 0c8cf33f266410c61ab3e2265cfa412200351d9c
@@ -111,7 +117,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
+  PromisesSwift: b27f410f9ea693753cfd4cfd8ac1c60a471f137b
 
-PODFILE CHECKSUM: e2e95b5462a550b05506e214f413bac985aef9c3
+PODFILE CHECKSUM: c77fbabad64b2a55a7eb4b8d6f7c29d631202fb2
 
 COCOAPODS: 1.6.1
