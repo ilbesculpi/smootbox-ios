@@ -152,7 +152,6 @@
 				B87CF19CC9CBDBDC945375B5 /* Pods-SmootBoxUITests.debug.xcconfig */,
 				69D4B53C7DC472E2B04A3FA1 /* Pods-SmootBoxUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -553,7 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilbesculpi.SmootBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilbesculpi.smootbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ilbesculpi.SmootBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilbesculpi.smootbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
