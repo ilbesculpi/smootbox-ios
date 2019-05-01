@@ -14,6 +14,9 @@
 		196139872279E17700BE6FD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196139852279E17700BE6FD1 /* LaunchScreen.storyboard */; };
 		196139922279E17700BE6FD1 /* SmootBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139912279E17700BE6FD1 /* SmootBoxTests.swift */; };
 		1961399D2279E17700BE6FD1 /* SmootBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961399C2279E17700BE6FD1 /* SmootBoxUITests.swift */; };
+		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
+		CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */; };
+		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04F9D748F267AE1333798586 /* Pods-SmootBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		196139792279E17500BE6FD1 /* SmootBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmootBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1961397C2279E17500BE6FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1961397E2279E17500BE6FD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 		196139982279E17700BE6FD1 /* SmootBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmootBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1961399C2279E17700BE6FD1 /* SmootBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmootBoxUITests.swift; sourceTree = "<group>"; };
 		1961399E2279E17700BE6FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
+		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D4B53C7DC472E2B04A3FA1 /* Pods-SmootBoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxUITests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxUITests/Pods-SmootBoxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9CE057509CEA039F1A6D4B3B /* Pods-SmootBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBox.release.xcconfig"; path = "Target Support Files/Pods-SmootBox/Pods-SmootBox.release.xcconfig"; sourceTree = "<group>"; };
+		A6B8FB4CBD6A6B64B98C8155 /* Pods-SmootBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBox.debug.xcconfig"; path = "Target Support Files/Pods-SmootBox/Pods-SmootBox.debug.xcconfig"; sourceTree = "<group>"; };
+		B87CF19CC9CBDBDC945375B5 /* Pods-SmootBoxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmootBoxUITests/Pods-SmootBoxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				196139902279E17700BE6FD1 /* SmootBoxTests */,
 				1961399B2279E17700BE6FD1 /* SmootBoxUITests */,
 				1961397A2279E17500BE6FD1 /* Products */,
+				5B2DB9A1E6075E1DB3BAA8F9 /* Pods */,
+				E9E02AB6D48FFEB6607E3743 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,30 @@
 			path = SmootBoxUITests;
 			sourceTree = "<group>";
 		};
+		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8FB4CBD6A6B64B98C8155 /* Pods-SmootBox.debug.xcconfig */,
+				9CE057509CEA039F1A6D4B3B /* Pods-SmootBox.release.xcconfig */,
+				04F9D748F267AE1333798586 /* Pods-SmootBoxTests.debug.xcconfig */,
+				37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */,
+				B87CF19CC9CBDBDC945375B5 /* Pods-SmootBoxUITests.debug.xcconfig */,
+				69D4B53C7DC472E2B04A3FA1 /* Pods-SmootBoxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9E02AB6D48FFEB6607E3743 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */,
+				CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */,
+				260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 196139A12279E17700BE6FD1 /* Build configuration list for PBXNativeTarget "SmootBox" */;
 			buildPhases = (
+				586923DC6109284BEAD8B1CA /* [CP] Check Pods Manifest.lock */,
 				196139752279E17500BE6FD1 /* Sources */,
 				196139762279E17500BE6FD1 /* Frameworks */,
 				196139772279E17500BE6FD1 /* Resources */,
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 196139A42279E17700BE6FD1 /* Build configuration list for PBXNativeTarget "SmootBoxTests" */;
 			buildPhases = (
+				9888E1738BB44C808AD5BC01 /* [CP] Check Pods Manifest.lock */,
 				196139892279E17700BE6FD1 /* Sources */,
 				1961398A2279E17700BE6FD1 /* Frameworks */,
 				1961398B2279E17700BE6FD1 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 196139A72279E17700BE6FD1 /* Build configuration list for PBXNativeTarget "SmootBoxUITests" */;
 			buildPhases = (
+				28E945676CAE54E83193D457 /* [CP] Check Pods Manifest.lock */,
 				196139942279E17700BE6FD1 /* Sources */,
 				196139952279E17700BE6FD1 /* Frameworks */,
 				196139962279E17700BE6FD1 /* Resources */,
@@ -250,6 +294,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28E945676CAE54E83193D457 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmootBoxUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		586923DC6109284BEAD8B1CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmootBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9888E1738BB44C808AD5BC01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmootBoxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		196139752279E17500BE6FD1 /* Sources */ = {
@@ -430,6 +543,7 @@
 		};
 		196139A22279E17700BE6FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B8FB4CBD6A6B64B98C8155 /* Pods-SmootBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +562,7 @@
 		};
 		196139A32279E17700BE6FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE057509CEA039F1A6D4B3B /* Pods-SmootBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +581,7 @@
 		};
 		196139A52279E17700BE6FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04F9D748F267AE1333798586 /* Pods-SmootBoxTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +603,7 @@
 		};
 		196139A62279E17700BE6FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +625,7 @@
 		};
 		196139A82279E17700BE6FD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B87CF19CC9CBDBDC945375B5 /* Pods-SmootBoxUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +646,7 @@
 		};
 		196139A92279E17700BE6FD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69D4B53C7DC472E2B04A3FA1 /* Pods-SmootBoxUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
