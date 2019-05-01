@@ -7,6 +7,11 @@ target 'SmootBox' do
   use_frameworks!
 
   # Pods for SmootBox
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  
 
   target 'SmootBoxTests' do
     inherit! :search_paths
