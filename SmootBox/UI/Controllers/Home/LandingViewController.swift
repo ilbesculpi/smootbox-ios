@@ -8,21 +8,59 @@
 
 import UIKit
 import Firebase
+import Promises
 
-class LandingViewController: UIViewController {
+class LandingViewController: BaseViewController {
 
+    
+    // MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad();
     }
     
+    
+    // MARK: - IBAction
+    
     @IBAction func skipSignIn(_ sender: Any) {
+        firebaseAnonymousSignIn()
+            .then { [weak self] (user) in
+                print("Signed in successfully.");
+                self?.appDelegate.loggedUser = user;
+                self?.navigateToHome();
+            }
+            .catch { (error) in
+                print("Could not sign in anonymously: \(error.localizedDescription)");
+            }
+    }
+    
+    private func firebaseAnonymousSignIn() -> Promise<User> {
+        
+        let promise = Promise<User>(on: .main) { fulfill, reject in
+            Auth.auth().signInAnonymously { (authResult, error) in
+                
+                if let error = error {
+                    reject(error);
+                    return;
+                }
+                
+                guard let user = authResult?.user else {
+                    let error = AppError.signInError;
+                    reject(error);
+                    return;
+                }
+                
+                fulfill(user);
+            }
+        };
+        
+        return promise;
         
     }
     
-    private func firebaseAnonymousSignIn() {
-        Auth.auth().signInAnonymously { (authResult, error) in
-            
-        }
+    private func navigateToHome() {
+        let homeController = UIStoryboard.Scene.Home.CityList;
+        appDelegate.setRootController(homeController);
     }
     
 

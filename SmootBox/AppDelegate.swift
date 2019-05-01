@@ -12,8 +12,24 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    // MARK: - Properties
+    
     var window: UIWindow?
+    
+    private var _user: User?
+    
+    var loggedUser: User? {
+        get {
+            return _user;
+        }
+        set {
+            _user = newValue;
+        }
+    };
 
+    
+    // MARK: - UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,9 +37,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true;
     }
 
+    
+    // MARK: - Dependencies
+    
     private func configureFirebase() {
         FirebaseApp.configure();
     }
 
+    
+    // MARK: - UI Navigation
+    
+    func setRootController(_ controller: UIViewController) {
+        self.window?.rootViewController = controller;
+    }
+    
 }
 
