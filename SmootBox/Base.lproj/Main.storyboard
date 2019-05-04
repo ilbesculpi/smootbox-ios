@@ -85,36 +85,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="145" y="52"/>
         </scene>
-        <!--View Controller-->
+        <!--City List View Controller-->
         <scene sceneID="H5j-GL-Fmx">
             <objects>
-                <viewController storyboardIdentifier="CityList" id="UJp-9T-NBJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CityList" id="UJp-9T-NBJ" customClass="CityListViewController" customModule="SmootBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VyO-Wh-jcE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-up-g8i">
-                                <rect key="frame" x="156.66666666666666" y="108" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="153.66666666666666" y="60" width="68" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UWs-4a-Scd">
+                                <rect key="frame" x="8" y="89" width="359" height="681"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MO3-r7-707">
+                                    <size key="itemSize" width="180" height="124"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityListCell" id="yt1-Q0-mNa" customClass="CityListCell" customModule="SmootBox" customModuleProvider="target">
+                                        <rect key="frame" x="89.666666666666671" y="0.0" width="180" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CityPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rIO-MR-gIq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="124"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwW-rQ-3kD" userLabel="TitleOverlay">
+                                                    <rect key="frame" x="0.0" y="94" width="180" height="30"/>
+                                                    <subviews>
+                                                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVF-RM-uee">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfe-Ax-60a">
+                                                            <rect key="frame" x="8" y="6.6666666666666714" width="164" height="17"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="CVF-RM-uee" secondAttribute="bottom" id="AI6-VN-gqE"/>
+                                                        <constraint firstItem="CVF-RM-uee" firstAttribute="leading" secondItem="wwW-rQ-3kD" secondAttribute="leading" id="El6-Rl-bDH"/>
+                                                        <constraint firstItem="mfe-Ax-60a" firstAttribute="centerY" secondItem="wwW-rQ-3kD" secondAttribute="centerY" id="Q8r-Fx-rVf"/>
+                                                        <constraint firstAttribute="height" constant="30" id="dUC-f5-KEp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CVF-RM-uee" secondAttribute="trailing" id="fo7-Pk-fIE"/>
+                                                        <constraint firstItem="mfe-Ax-60a" firstAttribute="leading" secondItem="wwW-rQ-3kD" secondAttribute="leading" constant="8" id="ipt-74-dlx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mfe-Ax-60a" secondAttribute="trailing" constant="8" id="q2O-b7-nkK"/>
+                                                        <constraint firstItem="CVF-RM-uee" firstAttribute="top" secondItem="wwW-rQ-3kD" secondAttribute="top" id="z7i-cC-kTt"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="rIO-MR-gIq" firstAttribute="top" secondItem="yt1-Q0-mNa" secondAttribute="top" id="0E0-Xb-6r1"/>
+                                            <constraint firstItem="wwW-rQ-3kD" firstAttribute="leading" secondItem="yt1-Q0-mNa" secondAttribute="leading" id="RXH-7W-FA1"/>
+                                            <constraint firstItem="rIO-MR-gIq" firstAttribute="leading" secondItem="yt1-Q0-mNa" secondAttribute="leading" id="jmI-DY-Zj7"/>
+                                            <constraint firstAttribute="bottom" secondItem="rIO-MR-gIq" secondAttribute="bottom" id="m1n-z5-ciz"/>
+                                            <constraint firstAttribute="trailing" secondItem="wwW-rQ-3kD" secondAttribute="trailing" id="mtZ-Cy-4GZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="rIO-MR-gIq" secondAttribute="trailing" id="qnc-EA-lw9"/>
+                                            <constraint firstAttribute="bottom" secondItem="wwW-rQ-3kD" secondAttribute="bottom" id="uaj-u1-G2y"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="rIO-MR-gIq" id="Bke-E5-xfJ"/>
+                                            <outlet property="labelCityName" destination="mfe-Ax-60a" id="9sz-dn-7Q5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="UJp-9T-NBJ" id="Jbe-KC-NeP"/>
+                                    <outlet property="delegate" destination="UJp-9T-NBJ" id="uqq-2l-fSs"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kIK-up-g8i" firstAttribute="top" secondItem="zn7-uc-r9g" secondAttribute="top" constant="64" id="bHv-rm-FSo"/>
+                            <constraint firstItem="UWs-4a-Scd" firstAttribute="leading" secondItem="zn7-uc-r9g" secondAttribute="leading" constant="8" id="6La-aT-uJC"/>
+                            <constraint firstItem="UWs-4a-Scd" firstAttribute="top" secondItem="kIK-up-g8i" secondAttribute="bottom" constant="8" id="F1b-6R-rhi"/>
+                            <constraint firstItem="zn7-uc-r9g" firstAttribute="bottom" secondItem="UWs-4a-Scd" secondAttribute="bottom" constant="8" id="Qtw-MF-1ov"/>
+                            <constraint firstItem="kIK-up-g8i" firstAttribute="top" secondItem="zn7-uc-r9g" secondAttribute="top" constant="16" id="bHv-rm-FSo"/>
                             <constraint firstItem="kIK-up-g8i" firstAttribute="centerX" secondItem="VyO-Wh-jcE" secondAttribute="centerX" id="fK5-FO-9yV"/>
+                            <constraint firstItem="zn7-uc-r9g" firstAttribute="trailing" secondItem="UWs-4a-Scd" secondAttribute="trailing" constant="8" id="q3M-4l-Hwd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zn7-uc-r9g"/>
                     </view>
+                    <connections>
+                        <outlet property="listView" destination="UWs-4a-Scd" id="dSu-2b-mWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wix-4V-jz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1259" y="53"/>
+            <point key="canvasLocation" x="1258.4000000000001" y="52.463054187192121"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CityPlaceholder" width="2135.5" height="1415"/>
         <image name="Logo" width="256" height="256"/>
     </resources>
 </document>

@@ -25,12 +25,12 @@ class LandingViewController: BaseViewController {
     @IBAction func skipSignIn(_ sender: Any) {
         firebaseAnonymousSignIn()
             .then { [weak self] (user) in
-                print("Signed in successfully.");
+                print("[INFO] Signed in successfully.");
                 self?.appDelegate.loggedUser = user;
                 self?.navigateToHome();
             }
             .catch { (error) in
-                print("Could not sign in anonymously: \(error.localizedDescription)");
+                print("[ERROR] Could not sign in anonymously: \(error.localizedDescription)");
             }
     }
     
