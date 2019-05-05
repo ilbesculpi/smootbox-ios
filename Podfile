@@ -7,6 +7,7 @@ target 'SmootBox' do
   use_frameworks!
 
   # Pods for SmootBox
+  pod 'Alamofire', '~> 5.0.0-beta.5'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

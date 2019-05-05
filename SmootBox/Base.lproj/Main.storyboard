@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="145" y="52"/>
         </scene>
-        <!--City List View Controller-->
+        <!--City List-->
         <scene sceneID="H5j-GL-Fmx">
             <objects>
                 <viewController storyboardIdentifier="CityList" id="UJp-9T-NBJ" customClass="CityListViewController" customModule="SmootBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,14 +95,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-up-g8i">
-                                <rect key="frame" x="153.66666666666666" y="60" width="68" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could not retrieve cities. Check your internet connection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4E-cO-pk4">
+                                <rect key="frame" x="48" y="387" width="279" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UWs-4a-Scd">
-                                <rect key="frame" x="8" y="89" width="359" height="681"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MO3-r7-707">
                                     <size key="itemSize" width="180" height="124"/>
@@ -112,7 +112,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityListCell" id="yt1-Q0-mNa" customClass="CityListCell" customModule="SmootBox" customModuleProvider="target">
-                                        <rect key="frame" x="89.666666666666671" y="0.0" width="180" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="124"/>
@@ -172,20 +172,49 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UWs-4a-Scd" firstAttribute="leading" secondItem="zn7-uc-r9g" secondAttribute="leading" constant="8" id="6La-aT-uJC"/>
-                            <constraint firstItem="UWs-4a-Scd" firstAttribute="top" secondItem="kIK-up-g8i" secondAttribute="bottom" constant="8" id="F1b-6R-rhi"/>
-                            <constraint firstItem="zn7-uc-r9g" firstAttribute="bottom" secondItem="UWs-4a-Scd" secondAttribute="bottom" constant="8" id="Qtw-MF-1ov"/>
-                            <constraint firstItem="kIK-up-g8i" firstAttribute="top" secondItem="zn7-uc-r9g" secondAttribute="top" constant="16" id="bHv-rm-FSo"/>
-                            <constraint firstItem="kIK-up-g8i" firstAttribute="centerX" secondItem="VyO-Wh-jcE" secondAttribute="centerX" id="fK5-FO-9yV"/>
-                            <constraint firstItem="zn7-uc-r9g" firstAttribute="trailing" secondItem="UWs-4a-Scd" secondAttribute="trailing" constant="8" id="q3M-4l-Hwd"/>
+                            <constraint firstItem="UWs-4a-Scd" firstAttribute="leading" secondItem="zn7-uc-r9g" secondAttribute="leading" id="6KN-Cr-uGe"/>
+                            <constraint firstItem="zn7-uc-r9g" firstAttribute="trailing" secondItem="UWs-4a-Scd" secondAttribute="trailing" id="Kwa-Gr-nAx"/>
+                            <constraint firstItem="c4E-cO-pk4" firstAttribute="centerY" secondItem="VyO-Wh-jcE" secondAttribute="centerY" id="MOe-ke-HLl"/>
+                            <constraint firstItem="zn7-uc-r9g" firstAttribute="bottom" secondItem="UWs-4a-Scd" secondAttribute="bottom" id="d1E-7Z-VX4"/>
+                            <constraint firstItem="UWs-4a-Scd" firstAttribute="top" secondItem="zn7-uc-r9g" secondAttribute="top" id="vbc-ZO-Zfu"/>
+                            <constraint firstItem="zn7-uc-r9g" firstAttribute="trailing" secondItem="c4E-cO-pk4" secondAttribute="trailing" constant="48" id="yx5-KG-eYB"/>
+                            <constraint firstItem="c4E-cO-pk4" firstAttribute="leading" secondItem="zn7-uc-r9g" secondAttribute="leading" constant="48" id="zZZ-k6-IRg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zn7-uc-r9g"/>
                     </view>
+                    <navigationItem key="navigationItem" title="City List" id="CGw-A0-fBL"/>
                     <connections>
+                        <outlet property="emptyMessage" destination="c4E-cO-pk4" id="cIH-l1-Nln"/>
                         <outlet property="listView" destination="UWs-4a-Scd" id="dSu-2b-mWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wix-4V-jz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200.8000000000002" y="52.463054187192121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B2l-QR-Q4B">
+            <objects>
+                <navigationController storyboardIdentifier="CityListNav" automaticallyAdjustsScrollViewInsets="NO" id="hnn-Gv-hzZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0AQ-1h-aBy">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.086274509799999996" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UJp-9T-NBJ" kind="relationship" relationship="rootViewController" id="HmF-x9-e1Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPU-Zg-CdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1258.4000000000001" y="52.463054187192121"/>
         </scene>

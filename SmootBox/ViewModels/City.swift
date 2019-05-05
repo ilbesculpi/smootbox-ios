@@ -22,3 +22,15 @@ class City {
     }
     
 }
+
+extension City {
+    
+    static func from(json: [String : Any]) -> City {
+        let city = City();
+        if let name = json["name"] as? String {
+            city.name = name;
+        }
+        return city;
+    }
+    
+}

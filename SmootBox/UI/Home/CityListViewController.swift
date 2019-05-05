@@ -24,6 +24,7 @@ class CityListViewController: BaseViewController, CityListView {
     // MARK: - IBOutlet
     
     @IBOutlet weak var listView: UICollectionView!
+    @IBOutlet weak var emptyMessage: UILabel!
     
     
     // MARK: - UIViewController
@@ -32,7 +33,7 @@ class CityListViewController: BaseViewController, CityListView {
         super.viewDidLoad();
         presenter = CityListPresenter(view: self);
         presenter.onStart();
-1    }
+    }
     
     
     // MARK: - CityListView
@@ -47,6 +48,7 @@ class CityListViewController: BaseViewController, CityListView {
     
     func displayError(_ message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert);
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil));
         present(alert, animated: false, completion: nil);
     }
     
@@ -55,6 +57,10 @@ class CityListViewController: BaseViewController, CityListView {
         self.listView.reloadData();
     }
     
+    func displayEmptyListMessage() {
+        listView.isHidden = true;
+        emptyMessage.isHidden = false;
+    }
 
 }
 
@@ -79,8 +85,8 @@ extension CityListViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let w = (collectionView.frame.size.width - 8.0) / 2.0;
-        let h = w * 16.0 / 9.0;
+        let w = (collectionView.frame.size.width - 16.0) / 2.0;
+        let h = w * 9.0 / 16.0;
         return CGSize(width: w, height: h);
     }
     

@@ -20,8 +20,12 @@ extension UIStoryboard {
                 return storyboard.instantiateViewController(withIdentifier: "Home");
             }
             
-            static var CityList : UIViewController {
-                return storyboard.instantiateViewController(withIdentifier: "CityList");
+            static var CityListNav : UINavigationController {
+                return storyboard.instantiateViewController(withIdentifier: "CityListNav") as! UINavigationController;
+            }
+            
+            static var CityList : CityListController {
+                return storyboard.instantiateViewController(withIdentifier: "CityList") as! CityListController;
             }
             
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CityListPresenter: CityListController {
     
@@ -14,6 +15,14 @@ class CityListPresenter: CityListController {
     
     let citiesService: CitiesService = CitiesService();
     var view: CityListView!
+    
+    var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate;
+    };
+    
+    var loggedUser: User? {
+        return appDelegate.loggedUser;
+    };
 
     
     // MARK: - Controller
@@ -24,15 +33,37 @@ class CityListPresenter: CityListController {
     
     func onStart() {
         view.startLoading();
-        citiesService.fetchCities()
-            .then { [weak view] (cities) in
-                view?.stopLoading();
-                view?.displayCities(cities);
+        loggedUser?.getIDTokenForcingRefresh(true) { [unowned self] (token, error) in
+            
+            if let error = error {
+                // Handle error
+                self.handleError(error: error);
+                return;
             }
-            .catch { [weak view] (error) in
-                view?.stopLoading();
-                view?.displayError(error.localizedDescription);
+            
+            guard let authToken = token else {
+                // Handle error
+                return;
             }
+            
+            self.citiesService.authToken = authToken;
+            self.citiesService.fetchCities()
+                .then { [weak view = self.view] (cities) in
+                    view?.stopLoading();
+                    view?.displayCities(cities);
+                }
+                .catch { [weak self] (error) in
+                    self?.handleError(error: error);
+                }
+        }
+        
+    }
+    
+    func handleError(error: Error) {
+        print("[ERROR] Error fetching cities: \(error.localizedDescription)");
+        view.stopLoading();
+        view.displayError("Error fetching cities.");
+        view.displayEmptyListMessage();
     }
     
 }

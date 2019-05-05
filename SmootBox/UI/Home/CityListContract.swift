@@ -11,6 +11,7 @@ import Foundation
 protocol CityListView: class {
     
     func displayCities(_ cities: [City]);
+    func displayEmptyListMessage();
     func startLoading();
     func stopLoading();
     func displayError(_ message: String);
