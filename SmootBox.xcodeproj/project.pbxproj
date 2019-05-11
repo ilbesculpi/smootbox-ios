@@ -26,6 +26,8 @@
 		196139B52279F4A600BE6FD1 /* UIStoryboard_Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B42279F4A600BE6FD1 /* UIStoryboard_Navigation.swift */; };
 		196139B82279F92600BE6FD1 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B72279F92600BE6FD1 /* AppError.swift */; };
 		196139BA2279F9AE00BE6FD1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B92279F9AE00BE6FD1 /* BaseViewController.swift */; };
+		19664C232286EE830010AD81 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C212286EE830010AD81 /* Appfile */; };
+		19664C242286EE830010AD81 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C222286EE830010AD81 /* Fastfile */; };
 		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
 		CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */; };
 		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
@@ -73,6 +75,8 @@
 		196139B42279F4A600BE6FD1 /* UIStoryboard_Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard_Navigation.swift; sourceTree = "<group>"; };
 		196139B72279F92600BE6FD1 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		196139B92279F9AE00BE6FD1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		19664C212286EE830010AD81 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		19664C222286EE830010AD81 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +126,7 @@
 		196139702279E17500BE6FD1 = {
 			isa = PBXGroup;
 			children = (
+				19664C202286EE830010AD81 /* fastlane */,
 				1961397B2279E17500BE6FD1 /* SmootBox */,
 				196139902279E17700BE6FD1 /* SmootBoxTests */,
 				1961399B2279E17700BE6FD1 /* SmootBoxUITests */,
@@ -220,6 +225,15 @@
 				194C6987227C9A37001971A5 /* City.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		19664C202286EE830010AD81 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				19664C212286EE830010AD81 /* Appfile */,
+				19664C222286EE830010AD81 /* Fastfile */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
@@ -353,7 +367,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19664C242286EE830010AD81 /* Fastfile in Resources */,
 				196139872279E17700BE6FD1 /* LaunchScreen.storyboard in Resources */,
+				19664C232286EE830010AD81 /* Appfile in Resources */,
 				196139AB2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */,
 				196139842279E17700BE6FD1 /* Assets.xcassets in Resources */,
 				196139822279E17500BE6FD1 /* Main.storyboard in Resources */,
