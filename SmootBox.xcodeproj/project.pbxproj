@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19437E56229190CA00331984 /* UIImageView_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19437E55229190CA00331984 /* UIImageView_Extension.swift */; };
 		194C6982227C9949001971A5 /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194C6981227C9949001971A5 /* CityListViewController.swift */; };
 		194C6984227C9981001971A5 /* CityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194C6983227C9981001971A5 /* CityListPresenter.swift */; };
 		194C6986227C99CF001971A5 /* CityListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194C6985227C99CF001971A5 /* CityListContract.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		04F9D748F267AE1333798586 /* Pods-SmootBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		19437E55229190CA00331984 /* UIImageView_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView_Extension.swift; sourceTree = "<group>"; };
 		194C6981227C9949001971A5 /* CityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
 		194C6983227C9981001971A5 /* CityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListPresenter.swift; sourceTree = "<group>"; };
 		194C6985227C99CF001971A5 /* CityListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListContract.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19437E54229190A600331984 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19437E55229190CA00331984 /* UIImageView_Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		194C6989227C9AA4001971A5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		1961397B2279E17500BE6FD1 /* SmootBox */ = {
 			isa = PBXGroup;
 			children = (
+				19437E54229190A600331984 /* Extensions */,
 				194C6989227C9AA4001971A5 /* Services */,
 				196139AE2279F38E00BE6FD1 /* UI */,
 				196139B62279F90A00BE6FD1 /* ViewModels */,
@@ -506,6 +517,7 @@
 				194C6984227C9981001971A5 /* CityListPresenter.swift in Sources */,
 				194C6988227C9A37001971A5 /* City.swift in Sources */,
 				196139B82279F92600BE6FD1 /* AppError.swift in Sources */,
+				19437E56229190CA00331984 /* UIImageView_Extension.swift in Sources */,
 				194C698B227C9ABB001971A5 /* CitiesService.swift in Sources */,
 				196139B22279F3C400BE6FD1 /* LandingViewController.swift in Sources */,
 				194C6986227C99CF001971A5 /* CityListContract.swift in Sources */,

@@ -11,6 +11,7 @@ import Foundation
 class City {
     
     var name: String = "";
+    var imageUrl: String = "";
     
     init() {
         
@@ -29,6 +30,9 @@ extension City {
         let city = City();
         if let name = json["name"] as? String {
             city.name = name;
+        }
+        if let image = json["image"] as? String {
+            city.imageUrl = image;
         }
         return city;
     }

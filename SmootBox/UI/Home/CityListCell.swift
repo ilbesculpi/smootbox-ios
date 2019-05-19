@@ -18,7 +18,7 @@ class CityListCell: UICollectionViewCell {
     }
     
     func display(city: City) {
-        image.image = UIImage(named: "CityPlaceholder");
+        image.loadUrl(city.imageUrl, placeholder: "CityPlaceholder");
         labelCityName.text = city.name;
     }
     
