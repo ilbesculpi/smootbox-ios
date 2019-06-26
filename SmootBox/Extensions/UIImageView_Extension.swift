@@ -10,27 +10,34 @@ import UIKit
 
 extension UIImageView {
     
-    public func loadUrl(_ urlString: String) {
-        if let url = URL(string: urlString) {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let imageData = data {
-                    self.image = UIImage(data: imageData);
+    func loadUrl(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+                DispatchQueue.main.async() {
+                    self.image = image;
                 }
-            }
-        }
+            }.resume();
     }
     
-    public func loadUrl(_ urlString: String, placeholder: String) {
-        
-        self.image = UIImage(named: placeholder);
-        
-        if let url = URL(string: urlString) {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let imageData = data {
-                    self.image = UIImage(data: imageData);
-                }
-            }
+    func loadUrl(string: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: string) else {
+            return;
         }
+        loadUrl(url: url, contentMode: mode);
+    }
+    
+    func loadUrl(_ s: String, placeholder: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        image = UIImage(named: placeholder);
+        guard let url = URL(string: s) else {
+            return;
+        }
+        loadUrl(url: url, contentMode: mode);
     }
     
 }
