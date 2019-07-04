@@ -8,18 +8,16 @@
 
 import Foundation
 
-protocol CityListView: class {
+
+protocol CityListView: BaseView {
     
     func displayCities(_ cities: [City]);
     func displayEmptyListMessage();
-    func startLoading();
-    func stopLoading();
-    func displayError(_ message: String);
     
 }
 
-protocol CityListController {
+protocol CityListController: BaseController {
     
-    func onStart();
+    func refresh();
     
 }

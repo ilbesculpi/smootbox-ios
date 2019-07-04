@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityListViewController: BaseViewController, CityListView {
+class CityListViewController: BaseViewController {
 
     
     // MARK: - Properties
@@ -25,46 +25,45 @@ class CityListViewController: BaseViewController, CityListView {
     
     @IBOutlet weak var listView: UICollectionView!
     @IBOutlet weak var emptyMessage: UILabel!
+    @IBOutlet weak var emptyMessageView: UIView!
     
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        presenter = CityListPresenter(view: self);
+        Configurator.configure(self);
         presenter.onStart();
     }
     
+    // MARK: - IBAction
     
-    // MARK: - CityListView
-    
-    func startLoading() {
-        
+    @IBAction func reload(_ sender: UIButton) {
+        presenter.refresh();
     }
     
-    func stopLoading() {
-        
-    }
-    
-    func displayError(_ message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert);
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil));
-        present(alert, animated: false, completion: nil);
-    }
+}
+
+// MARK: - CityListView
+extension CityListViewController: CityListView {
     
     func displayCities(_ cities: [City]) {
+        emptyMessageView.isHidden = true;
         self.cities = cities;
         self.listView.reloadData();
     }
     
     func displayEmptyListMessage() {
         listView.isHidden = true;
-        emptyMessage.isHidden = false;
+        emptyMessageView.isHidden = false;
     }
 
 }
 
+// MARK: -
 extension CityListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    // MARK: UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cities.count;

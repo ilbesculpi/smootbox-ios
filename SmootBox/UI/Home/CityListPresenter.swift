@@ -32,7 +32,17 @@ class CityListPresenter: CityListController {
     }
     
     func onStart() {
+        fetchCities();
+    }
+    
+    func refresh() {
+        fetchCities();
+    }
+    
+    func fetchCities() {
+        
         view.startLoading();
+        
         loggedUser?.getIDTokenForcingRefresh(true) { [unowned self] (token, error) in
             
             if let error = error {
@@ -54,7 +64,7 @@ class CityListPresenter: CityListController {
                 }
                 .catch { [weak self] (error) in
                     self?.handleError(error: error);
-                }
+            }
         }
         
     }
