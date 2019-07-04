@@ -12,6 +12,7 @@ class Configurator {
     
     static func configure(_ view: CityListViewController) {
         let presenter = CityListPresenter(view: view);
+        presenter.cityService = CityFirebaseService();
         view.presenter = presenter;
     }
     

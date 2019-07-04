@@ -13,7 +13,7 @@ class CityListPresenter: CityListController {
     
     // MARK: - Properties
     
-    let citiesService: CitiesService = CitiesService();
+    var cityService: CityRepository!
     var view: CityListView!
     
     var appDelegate: AppDelegate {
@@ -23,12 +23,20 @@ class CityListPresenter: CityListController {
     var loggedUser: User? {
         return appDelegate.loggedUser;
     };
+    
+    var databaseHandler: DatabaseHandle!
 
     
     // MARK: - Controller
     
     init(view: CityListView) {
         self.view = view;
+    }
+    
+    deinit {
+        if let handler = self.databaseHandler {
+            cityService.remove(handler: handler);
+        }
     }
     
     func onStart() {
@@ -56,15 +64,13 @@ class CityListPresenter: CityListController {
                 return;
             }
             
-            self.citiesService.authToken = authToken;
-            self.citiesService.fetchCities()
-                .then { [weak view = self.view] (cities) in
-                    view?.stopLoading();
-                    view?.displayCities(cities);
-                }
-                .catch { [weak self] (error) in
-                    self?.handleError(error: error);
+            self.cityService.authToken = authToken;
+            
+            self.databaseHandler = self.cityService.fetchCities() { [weak view = self.view] (cities) in
+                view?.stopLoading();
+                view?.displayCities(cities);
             }
+            
         }
         
     }
