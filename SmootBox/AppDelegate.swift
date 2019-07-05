@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureFirebase();
         
         // configure initial controller
-        let rootController = Configurator.landingController();
+        let rootController = Wireframe.landingController();
         
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.rootViewController = rootController;
@@ -51,7 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Appearance
     
     private func configureAppearance() {
-        UINavigationBar.appearance().backgroundColor = UIColor.primaryDarkColor;
+        UINavigationBar.appearance().barTintColor = UIColor.primaryDarkColor;
+        UINavigationBar.appearance().tintColor = UIColor.white;
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ];
     }
 
     

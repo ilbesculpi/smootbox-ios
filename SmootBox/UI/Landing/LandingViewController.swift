@@ -59,8 +59,8 @@ class LandingViewController: BaseViewController {
     }
     
     private func navigateToHome() {
-        let homeController = Configurator.cityListController();
-        let rootController = Configurator.embedInNavigation(homeController);
+        let homeController = Wireframe.cityListController();
+        let rootController = Wireframe.embedInNavigation(homeController);
         appDelegate.setRootController(rootController);
     }
     

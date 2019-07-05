@@ -83,7 +83,7 @@ extension CityListViewController: UICollectionViewDataSource, UICollectionViewDe
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let w = (collectionView.frame.size.width - 16.0) / 2.0;
-        let h = w * 9.0 / 16.0;
+        let h = w * 5.0 / 6.0;
         return CGSize(width: w, height: h);
     }
     

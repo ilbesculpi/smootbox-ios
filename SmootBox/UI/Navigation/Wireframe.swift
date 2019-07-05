@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Configurator {
+class Wireframe {
     
     static func embedInNavigation(_ root: UIViewController) -> UINavigationController {
         let navigation = UINavigationController(rootViewController: root);
