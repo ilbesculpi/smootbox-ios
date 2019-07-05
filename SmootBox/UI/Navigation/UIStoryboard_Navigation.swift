@@ -16,16 +16,18 @@ extension UIStoryboard {
             
             static let storyboard = UIStoryboard(name: "Main", bundle: nil);
             
-            static var Home : UIViewController {
-                return storyboard.instantiateViewController(withIdentifier: "Home");
+            static var Landing : LandingViewController {
+                return storyboard.instantiateViewController(withIdentifier: "Landing") as! LandingViewController;
             }
             
-            static var CityListNav : UINavigationController {
-                return storyboard.instantiateViewController(withIdentifier: "CityListNav") as! UINavigationController;
-            }
+        }
+        
+        internal enum City {
             
-            static var CityList : CityListController {
-                return storyboard.instantiateViewController(withIdentifier: "CityList") as! CityListController;
+            static let storyboard = UIStoryboard(name: "Main", bundle: nil);
+            
+            static var CityList : CityListViewController {
+                return storyboard.instantiateViewController(withIdentifier: "CityList") as! CityListViewController;
             }
             
         }

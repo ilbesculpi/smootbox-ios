@@ -32,9 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        configureAppearance();
         configureFirebase();
+        
+        // configure initial controller
+        let rootController = Configurator.landingController();
+        
+        window = UIWindow(frame: UIScreen.main.bounds);
+        window?.rootViewController = rootController;
+        window?.makeKeyAndVisible();
+        
         return true;
+    }
+    
+    
+    // MARK: - Appearance
+    
+    private func configureAppearance() {
+        UINavigationBar.appearance().backgroundColor = UIColor.primaryDarkColor;
     }
 
     

@@ -34,6 +34,9 @@
 		196139BA2279F9AE00BE6FD1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B92279F9AE00BE6FD1 /* BaseViewController.swift */; };
 		19664C232286EE830010AD81 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C212286EE830010AD81 /* Appfile */; };
 		19664C242286EE830010AD81 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C222286EE830010AD81 /* Fastfile */; };
+		19A712DF22CF660E003BADBE /* LandingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712DE22CF660E003BADBE /* LandingContracts.swift */; };
+		19A712E222CF69BC003BADBE /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E122CF69BC003BADBE /* UIColor_Extension.swift */; };
+		19A712E422CF6B99003BADBE /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E322CF6B99003BADBE /* String_Extension.swift */; };
 		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
 		CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */; };
 		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
@@ -89,6 +92,9 @@
 		196139B92279F9AE00BE6FD1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		19664C212286EE830010AD81 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		19664C222286EE830010AD81 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		19A712DE22CF660E003BADBE /* LandingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContracts.swift; sourceTree = "<group>"; };
+		19A712E122CF69BC003BADBE /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		19A712E322CF6B99003BADBE /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
 		260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +146,7 @@
 			children = (
 				19289B2C22CD9A2B005A3C27 /* AppContracts.swift */,
 				194C6985227C99CF001971A5 /* CityListContracts.swift */,
-				19289B3122CE11F7005A3C27 /* BaseRepository.swift */,
-				19289B2F22CE1149005A3C27 /* CityRepository.swift */,
+				19A712DE22CF660E003BADBE /* LandingContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -150,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				19437E55229190CA00331984 /* UIImageView_Extension.swift */,
+				19A712E122CF69BC003BADBE /* UIColor_Extension.swift */,
+				19A712E322CF6B99003BADBE /* String_Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,8 +196,8 @@
 		1961397B2279E17500BE6FD1 /* SmootBox */ = {
 			isa = PBXGroup;
 			children = (
+				19A712DD22CF65CA003BADBE /* Domain */,
 				19437E54229190A600331984 /* Extensions */,
-				196139B62279F90A00BE6FD1 /* Models */,
 				194C6989227C9AA4001971A5 /* Services */,
 				196139AE2279F38E00BE6FD1 /* UI */,
 				196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */,
@@ -224,8 +231,8 @@
 		196139AE2279F38E00BE6FD1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				19289B2E22CD9A83005A3C27 /* Contracts */,
-				196139B02279F39E00BE6FD1 /* Home */,
+				19A712DC22CF6594003BADBE /* Landing */,
+				196139B02279F39E00BE6FD1 /* CityList */,
 				196139AF2279F39800BE6FD1 /* Controllers */,
 				196139B32279F47E00BE6FD1 /* Navigation */,
 				19289B2922CD9986005A3C27 /* Wireframes */,
@@ -241,15 +248,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		196139B02279F39E00BE6FD1 /* Home */ = {
+		196139B02279F39E00BE6FD1 /* CityList */ = {
 			isa = PBXGroup;
 			children = (
-				196139B12279F3C400BE6FD1 /* LandingViewController.swift */,
 				194C6981227C9949001971A5 /* CityListViewController.swift */,
 				194C6983227C9981001971A5 /* CityListPresenter.swift */,
 				194C698C227C9E2B001971A5 /* CityListCell.swift */,
 			);
-			path = Home;
+			path = CityList;
 			sourceTree = "<group>";
 		};
 		196139B32279F47E00BE6FD1 /* Navigation */ = {
@@ -276,6 +282,33 @@
 				19664C222286EE830010AD81 /* Fastfile */,
 			);
 			path = fastlane;
+			sourceTree = "<group>";
+		};
+		19A712DC22CF6594003BADBE /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				196139B12279F3C400BE6FD1 /* LandingViewController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		19A712DD22CF65CA003BADBE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				19289B2E22CD9A83005A3C27 /* Contracts */,
+				196139B62279F90A00BE6FD1 /* Models */,
+				19A712E022CF662A003BADBE /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		19A712E022CF662A003BADBE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				19289B3122CE11F7005A3C27 /* BaseRepository.swift */,
+				19289B2F22CE1149005A3C27 /* CityRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
@@ -548,6 +581,7 @@
 				19289B3422CE1241005A3C27 /* BaseFirebaseService.swift in Sources */,
 				194C6984227C9981001971A5 /* CityListPresenter.swift in Sources */,
 				194C6988227C9A37001971A5 /* City.swift in Sources */,
+				19A712E422CF6B99003BADBE /* String_Extension.swift in Sources */,
 				196139B82279F92600BE6FD1 /* AppError.swift in Sources */,
 				19437E56229190CA00331984 /* UIImageView_Extension.swift in Sources */,
 				194C698B227C9ABB001971A5 /* CityFirebaseService.swift in Sources */,
@@ -557,7 +591,9 @@
 				19289B2D22CD9A2B005A3C27 /* AppContracts.swift in Sources */,
 				19289B3222CE11F7005A3C27 /* BaseRepository.swift in Sources */,
 				196139B52279F4A600BE6FD1 /* UIStoryboard_Navigation.swift in Sources */,
+				19A712DF22CF660E003BADBE /* LandingContracts.swift in Sources */,
 				1961397D2279E17500BE6FD1 /* AppDelegate.swift in Sources */,
+				19A712E222CF69BC003BADBE /* UIColor_Extension.swift in Sources */,
 				194C6982227C9949001971A5 /* CityListViewController.swift in Sources */,
 				194C698D227C9E2B001971A5 /* CityListCell.swift in Sources */,
 				19289B3022CE1149005A3C27 /* CityRepository.swift in Sources */,

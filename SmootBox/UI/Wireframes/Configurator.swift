@@ -7,13 +7,26 @@
 //
 
 import Foundation
+import UIKit
 
 class Configurator {
     
-    static func configure(_ view: CityListViewController) {
+    static func embedInNavigation(_ root: UIViewController) -> UINavigationController {
+        let navigation = UINavigationController(rootViewController: root);
+        return navigation;
+    }
+    
+    static func landingController() -> LandingViewController {
+        let view = UIStoryboard.Scene.Home.Landing;
+        return view;
+    }
+    
+    static func cityListController() -> CityListViewController {
+        let view = UIStoryboard.Scene.City.CityList;
         let presenter = CityListPresenter(view: view);
         presenter.cityService = CityFirebaseService();
         view.presenter = presenter;
+        return view;
     }
     
 }

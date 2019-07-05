@@ -24,7 +24,6 @@ class CityListViewController: BaseViewController {
     // MARK: - IBOutlet
     
     @IBOutlet weak var listView: UICollectionView!
-    @IBOutlet weak var emptyMessage: UILabel!
     @IBOutlet weak var emptyMessageView: UIView!
     
     
@@ -32,7 +31,6 @@ class CityListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        Configurator.configure(self);
         presenter.onStart();
     }
     
