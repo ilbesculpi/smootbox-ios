@@ -32,15 +32,28 @@ class UIContainerTests: XCTestCase {
     func testLandingViewControllerDependencies() {
         
         // When: ask container to provide a LandingViewController
-        let landingViewController = container.resolve(LandingViewController.self);
+        let controller = container.resolve(LandingViewController.self);
         
         // Expect: instance should exists
-        XCTAssertNotNil(landingViewController);
+        XCTAssertNotNil(controller);
         
         // Expect: viewController should has its dependencies set
-        XCTAssertNotNil(landingViewController?.presenter);
-        XCTAssertTrue(landingViewController === landingViewController?.presenter.view);
+        XCTAssertNotNil(controller?.presenter);
+        XCTAssertTrue(controller === controller?.presenter.view);
         
+    }
+    
+    func testCityListViewControllerDependencies() {
+        
+        // When: ask container to provide a CityListViewController
+        let controller = container.resolve(CityListViewController.self);
+        
+        // Expect: instance should exist
+        XCTAssertNotNil(controller);
+        
+        // Expect: viewController should has its dependencies set
+        XCTAssertNotNil(controller?.presenter);
+        XCTAssertTrue(controller === controller?.presenter.view);
     }
     
 }

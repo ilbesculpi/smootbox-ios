@@ -26,7 +26,7 @@ extension UIStoryboard {
             
             static let storyboard = UIStoryboard(name: "Main", bundle: nil);
             
-            static var CityList : CityListViewController {
+            static var cityList : CityListViewController {
                 return storyboard.instantiateViewController(withIdentifier: "CityList") as! CityListViewController;
             }
             

@@ -2,14 +2,13 @@
 //  BaseViewController.swift
 //  SmootBox
 //
-//  Created by Ilbert Esculpi on 5/1/19.
-//  Copyright © 2019 SmootBox. All rights reserved.
+//  Base View Controller
 //
 
 import UIKit
 import Firebase
 
-class BaseViewController: UIViewController, BaseView {
+class BaseViewController: UIViewController, BaseViewContract {
 
     
     // MARK: - Properties
@@ -30,7 +29,7 @@ class BaseViewController: UIViewController, BaseView {
     }
     
     
-    // MARK: - BaseView
+    // MARK: - BaseViewContract
     
     func startLoading() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true;

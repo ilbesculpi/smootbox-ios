@@ -59,8 +59,8 @@ class LandingViewController: BaseViewController, LandingViewContract {
     
     
     private func navigateToHome() {
-        let homeController = Wireframe.cityListController();
-        let rootController = Wireframe.embedInNavigation(homeController);
+        let homeController = appDelegate.container.resolve(CityListViewController.self)!
+        let rootController = UINavigationController(rootViewController: homeController);
         appDelegate.setRootController(rootController);
     }
     

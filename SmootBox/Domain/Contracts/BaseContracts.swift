@@ -2,13 +2,12 @@
 //  AppContracts.swift
 //  SmootBox
 //
-//  Created by Ilbert Esculpi on 7/3/19.
-//  Copyright © 2019 SmootBox. All rights reserved.
+//  Base Contracts
 //
 
 import Foundation
 
-protocol BaseView: class {
+protocol BaseViewContract : class {
     
     func startLoading();
     func stopLoading();
@@ -17,8 +16,8 @@ protocol BaseView: class {
     
 }
 
-protocol BaseController {
+protocol BasePresenterContract {
     
-    func onStart();
+    func onViewReady();
     
 }

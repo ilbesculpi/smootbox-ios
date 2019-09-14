@@ -33,6 +33,14 @@ class UIContainer: NSObject {
             return controller;
         }
         
+        // CityList
+        container.register(CityListViewController.self) { r in
+            let controller = UIStoryboard.Scene.City.cityList;
+            let presenter = CityListPresenter(view: controller);
+            controller.presenter = presenter;
+            return controller;
+        }
+        
     }
     
 }

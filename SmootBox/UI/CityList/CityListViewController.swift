@@ -13,7 +13,8 @@ class CityListViewController: BaseViewController {
     
     // MARK: - Properties
     
-    var presenter: CityListController!
+    var presenter: CityListPresenterContract!
+    
     
     /**
     Hold the cities to display
@@ -22,7 +23,6 @@ class CityListViewController: BaseViewController {
     
     
     // MARK: - IBOutlet
-    
     @IBOutlet weak var listView: UICollectionView!
     @IBOutlet weak var emptyMessageView: UIView!
     
@@ -31,7 +31,7 @@ class CityListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        presenter.onStart();
+        presenter.onViewReady();
     }
     
     // MARK: - IBAction
@@ -42,8 +42,8 @@ class CityListViewController: BaseViewController {
     
 }
 
-// MARK: - CityListView
-extension CityListViewController: CityListView {
+// MARK: - CityListViewContract
+extension CityListViewController: CityListViewContract {
     
     func displayCities(_ cities: [City]) {
         emptyMessageView.isHidden = true;
@@ -58,10 +58,8 @@ extension CityListViewController: CityListView {
 
 }
 
-// MARK: -
+// MARK: - UICollectionView
 extension CityListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    // MARK: UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cities.count;

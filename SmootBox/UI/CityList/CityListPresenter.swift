@@ -2,19 +2,18 @@
 //  CityListPresenter.swift
 //  SmootBox
 //
-//  Created by Ilbert Esculpi on 5/3/19.
-//  Copyright © 2019 SmootBox. All rights reserved.
+//  Presenter for City List Screen.
 //
 
 import UIKit
 import Firebase
 
-class CityListPresenter: CityListController {
+class CityListPresenter: CityListPresenterContract {
+    
     
     // MARK: - Properties
-    
     var cityService: CityRepository!
-    var view: CityListView!
+    weak var view: CityListViewContract!
     
     var appDelegate: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate;
@@ -27,19 +26,23 @@ class CityListPresenter: CityListController {
     var databaseHandler: DatabaseHandle!
 
     
-    // MARK: - Controller
+    // MARK: - Initialization
     
-    init(view: CityListView) {
+    init(view: CityListViewContract) {
         self.view = view;
     }
     
     deinit {
+        self.view = nil;
         if let handler = self.databaseHandler {
             cityService.remove(handler: handler);
         }
     }
     
-    func onStart() {
+    
+    // MARK: - CityListPresenterContract
+    
+    func onViewReady() {
         fetchCities();
     }
     
