@@ -7,12 +7,18 @@ target 'SmootBox' do
   use_frameworks!
 
   # Pods for SmootBox
+  
+  # Networking
   pod 'Alamofire', '~> 5.0.0-beta.5'
+  
+  # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'PromisesSwift'
+  
+  # Utils
+  pod 'PromisesSwift', '~> 1.2.8'
   
 
   target 'SmootBoxTests' do
