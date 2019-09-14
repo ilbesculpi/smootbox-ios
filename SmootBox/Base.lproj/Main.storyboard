@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="667-N5-Uac" userLabel="Logo">
-                                <rect key="frame" x="91.666666666666686" y="168.66666666666663" width="192" height="196"/>
+                                <rect key="frame" x="91.666666666666686" y="171" width="192" height="196"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="e5T-5W-jBI">
                                         <rect key="frame" x="32" y="16" width="128" height="128"/>
@@ -29,7 +29,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="smootbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAk-xj-zPx">
-                                        <rect key="frame" x="8" y="152.00000000000003" width="176" height="28"/>
+                                        <rect key="frame" x="8" y="152" width="176" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="0.086274509803921567" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -48,12 +48,6 @@
                                     <constraint firstItem="LAk-xj-zPx" firstAttribute="top" secondItem="e5T-5W-jBI" secondAttribute="bottom" constant="8" id="xRA-DX-44b"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to save your trips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCK-VC-YeG">
-                                <rect key="frame" x="99" y="396.66666666666669" width="177" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1u-9Q-Y9o">
                                 <rect key="frame" x="145" y="699.33333333333337" width="85" height="30.666666666666629"/>
                                 <state key="normal">
@@ -70,18 +64,26 @@
                                     <action selector="skipSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyP-TV-vac"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WQ-jJ-wht">
+                                <rect key="frame" x="103" y="391" width="169" height="30"/>
+                                <state key="normal" title="Sign in to save your trips"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rCK-VC-YeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="53y-dt-R4k"/>
-                            <constraint firstItem="rCK-VC-YeG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BGB-uz-ddd"/>
-                            <constraint firstItem="rCK-VC-YeG" firstAttribute="top" secondItem="667-N5-Uac" secondAttribute="bottom" constant="32" id="D6I-B2-jdI"/>
+                            <constraint firstItem="6WQ-jJ-wht" firstAttribute="top" secondItem="667-N5-Uac" secondAttribute="bottom" constant="24" id="D18-q4-cDz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d1u-9Q-Y9o" secondAttribute="bottom" constant="48" id="EKt-vE-6Xb"/>
                             <constraint firstItem="d1u-9Q-Y9o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAo-ak-uVg"/>
+                            <constraint firstItem="6WQ-jJ-wht" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ce7-aD-oRa"/>
+                            <constraint firstItem="6WQ-jJ-wht" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g4b-af-Hvk"/>
                             <constraint firstItem="667-N5-Uac" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0w-Ac-WzL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonSignIn" destination="6WQ-jJ-wht" id="Sap-8A-hEL"/>
+                        <outlet property="buttonSkipSignIn" destination="d1u-9Q-Y9o" id="Gq4-66-FCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,7 +145,7 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-y5-3LU">
                                                     <rect key="frame" x="0.0" y="0.0" width="175" height="101.66666666666667"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CityPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rIO-MR-gIq">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CityPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="rIO-MR-gIq">
                                                             <rect key="frame" x="0.0" y="0.0" width="175" height="101.66666666666667"/>
                                                         </imageView>
                                                     </subviews>

@@ -15,6 +15,7 @@ enum ServiceError: Error {
     
     case invalidResponse
     case appError(message: String)
+    case authError
     
 }
 

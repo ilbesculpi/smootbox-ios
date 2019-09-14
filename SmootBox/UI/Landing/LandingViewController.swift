@@ -9,11 +9,16 @@ import UIKit
 import Firebase
 import Promises
 
-class LandingViewController: BaseViewController {
+class LandingViewController: BaseViewController, LandingViewContract {
     
     
     // MARK: - Properties
-    var presenter: LandingPresenter!
+    var presenter: LandingPresenterContract!
+    
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var buttonSkipSignIn: UIButton!
+    @IBOutlet weak var buttonSignIn: UIButton!
     
     
     // MARK: - Initialization
@@ -33,40 +38,25 @@ class LandingViewController: BaseViewController {
     // MARK: - IBAction
     
     @IBAction func skipSignIn(_ sender: Any) {
-        firebaseAnonymousSignIn()
-            .then { [weak self] (user) in
-                print("[INFO] Signed in successfully.");
-                self?.appDelegate.loggedUser = user;
-                self?.navigateToHome();
+        
+        presenter.signInAnonymous() { [weak self] result in
+            
+            switch result {
+                
+                case .success(let user):
+                    print("[INFO] Signed in successfully.");
+                    self?.appDelegate.loggedUser = user;
+                    self?.navigateToHome();
+                
+                case .failure(let error):
+                    print("[ERROR] Could not sign in anonymously: \(error.localizedDescription)");
+                    self?.displayError("Error signing in.");
             }
-            .catch { (error) in
-                print("[ERROR] Could not sign in anonymously: \(error.localizedDescription)");
-            }
+            
+        }
+        
     }
     
-    private func firebaseAnonymousSignIn() -> Promise<User> {
-        
-        let promise = Promise<User>(on: .main) { fulfill, reject in
-            Auth.auth().signInAnonymously { (authResult, error) in
-                
-                if let error = error {
-                    reject(error);
-                    return;
-                }
-                
-                guard let user = authResult?.user else {
-                    let error = AppError.signInError;
-                    reject(error);
-                    return;
-                }
-                
-                fulfill(user);
-            }
-        };
-        
-        return promise;
-        
-    }
     
     private func navigateToHome() {
         let homeController = Wireframe.cityListController();

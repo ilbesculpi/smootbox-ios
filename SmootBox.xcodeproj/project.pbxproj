@@ -23,7 +23,6 @@
 		196139822279E17500BE6FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196139802279E17500BE6FD1 /* Main.storyboard */; };
 		196139842279E17700BE6FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 196139832279E17700BE6FD1 /* Assets.xcassets */; };
 		196139872279E17700BE6FD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196139852279E17700BE6FD1 /* LaunchScreen.storyboard */; };
-		196139922279E17700BE6FD1 /* SmootBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139912279E17700BE6FD1 /* SmootBoxTests.swift */; };
 		1961399D2279E17700BE6FD1 /* SmootBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1961399C2279E17700BE6FD1 /* SmootBoxUITests.swift */; };
 		196139AB2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */; };
 		196139AC2279E5F200BE6FD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 196139AA2279E5F200BE6FD1 /* GoogleService-Info.plist */; };
@@ -34,12 +33,14 @@
 		196139BA2279F9AE00BE6FD1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196139B92279F9AE00BE6FD1 /* BaseViewController.swift */; };
 		19664C232286EE830010AD81 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C212286EE830010AD81 /* Appfile */; };
 		19664C242286EE830010AD81 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 19664C222286EE830010AD81 /* Fastfile */; };
-		19A712DF22CF660E003BADBE /* LandingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712DE22CF660E003BADBE /* LandingContracts.swift */; };
 		19A712E222CF69BC003BADBE /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E122CF69BC003BADBE /* UIColor_Extension.swift */; };
 		19A712E422CF6B99003BADBE /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E322CF6B99003BADBE /* String_Extension.swift */; };
 		19D70F7B232C68C000F6EC72 /* UIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7A232C68C000F6EC72 /* UIContainer.swift */; };
 		19D70F7D232C6C2700F6EC72 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */; };
 		19D70F80232C6C6400F6EC72 /* UIContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */; };
+		19D70F82232D02E700F6EC72 /* LandingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F81232D02E700F6EC72 /* LandingContracts.swift */; };
+		19D70F85232D06ED00F6EC72 /* LandingMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F84232D06ED00F6EC72 /* LandingMocks.swift */; };
+		19D70F87232D071600F6EC72 /* LandingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F86232D071600F6EC72 /* LandingViewControllerTests.swift */; };
 		677351E81A9712378B5293BC /* libPods-SmootBoxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B569C9C7438A3F5F5C63871 /* libPods-SmootBoxUITests.a */; };
 		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
 		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
@@ -83,7 +84,6 @@
 		196139862279E17700BE6FD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		196139882279E17700BE6FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1961398D2279E17700BE6FD1 /* SmootBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmootBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		196139912279E17700BE6FD1 /* SmootBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmootBoxTests.swift; sourceTree = "<group>"; };
 		196139932279E17700BE6FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		196139982279E17700BE6FD1 /* SmootBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmootBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1961399C2279E17700BE6FD1 /* SmootBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmootBoxUITests.swift; sourceTree = "<group>"; };
@@ -95,12 +95,14 @@
 		196139B92279F9AE00BE6FD1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		19664C212286EE830010AD81 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		19664C222286EE830010AD81 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		19A712DE22CF660E003BADBE /* LandingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContracts.swift; sourceTree = "<group>"; };
 		19A712E122CF69BC003BADBE /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		19A712E322CF6B99003BADBE /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
 		19D70F7A232C68C000F6EC72 /* UIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContainer.swift; sourceTree = "<group>"; };
 		19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
 		19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContainerTests.swift; sourceTree = "<group>"; };
+		19D70F81232D02E700F6EC72 /* LandingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContracts.swift; sourceTree = "<group>"; };
+		19D70F84232D06ED00F6EC72 /* LandingMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingMocks.swift; sourceTree = "<group>"; };
+		19D70F86232D071600F6EC72 /* LandingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewControllerTests.swift; sourceTree = "<group>"; };
 		2B569C9C7438A3F5F5C63871 /* libPods-SmootBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmootBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +146,6 @@
 			children = (
 				19289B2C22CD9A2B005A3C27 /* AppContracts.swift */,
 				194C6985227C99CF001971A5 /* CityListContracts.swift */,
-				19A712DE22CF660E003BADBE /* LandingContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -213,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				19D70F7E232C6C5600F6EC72 /* UI */,
-				196139912279E17700BE6FD1 /* SmootBoxTests.swift */,
 				196139932279E17700BE6FD1 /* Info.plist */,
 			);
 			path = SmootBoxTests;
@@ -287,6 +287,7 @@
 		19A712DC22CF6594003BADBE /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				19D70F81232D02E700F6EC72 /* LandingContracts.swift */,
 				196139B12279F3C400BE6FD1 /* LandingViewController.swift */,
 				19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */,
 			);
@@ -316,8 +317,18 @@
 			isa = PBXGroup;
 			children = (
 				19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */,
+				19D70F83232D06DA00F6EC72 /* Landing */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		19D70F83232D06DA00F6EC72 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				19D70F86232D071600F6EC72 /* LandingViewControllerTests.swift */,
+				19D70F84232D06ED00F6EC72 /* LandingMocks.swift */,
+			);
+			path = Landing;
 			sourceTree = "<group>";
 		};
 		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
@@ -570,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				196139BA2279F9AE00BE6FD1 /* BaseViewController.swift in Sources */,
+				19D70F82232D02E700F6EC72 /* LandingContracts.swift in Sources */,
 				19289B3422CE1241005A3C27 /* BaseFirebaseService.swift in Sources */,
 				194C6984227C9981001971A5 /* CityListPresenter.swift in Sources */,
 				194C6988227C9A37001971A5 /* City.swift in Sources */,
@@ -585,7 +597,6 @@
 				19289B2D22CD9A2B005A3C27 /* AppContracts.swift in Sources */,
 				19289B3222CE11F7005A3C27 /* BaseRepository.swift in Sources */,
 				196139B52279F4A600BE6FD1 /* UIStoryboard_Navigation.swift in Sources */,
-				19A712DF22CF660E003BADBE /* LandingContracts.swift in Sources */,
 				1961397D2279E17500BE6FD1 /* AppDelegate.swift in Sources */,
 				19A712E222CF69BC003BADBE /* UIColor_Extension.swift in Sources */,
 				194C6982227C9949001971A5 /* CityListViewController.swift in Sources */,
@@ -598,7 +609,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196139922279E17700BE6FD1 /* SmootBoxTests.swift in Sources */,
+				19D70F87232D071600F6EC72 /* LandingViewControllerTests.swift in Sources */,
+				19D70F85232D06ED00F6EC72 /* LandingMocks.swift in Sources */,
 				19D70F80232C6C6400F6EC72 /* UIContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
