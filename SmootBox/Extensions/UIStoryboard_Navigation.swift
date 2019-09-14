@@ -16,7 +16,7 @@ extension UIStoryboard {
             
             static let storyboard = UIStoryboard(name: "Main", bundle: nil);
             
-            static var Landing : LandingViewController {
+            static var landing : LandingViewController {
                 return storyboard.instantiateViewController(withIdentifier: "Landing") as! LandingViewController;
             }
             

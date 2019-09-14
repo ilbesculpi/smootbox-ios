@@ -17,6 +17,9 @@ target 'SmootBox' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   
+  # Dependency Injection
+  pod 'Swinject', '~> 2.7'
+  
   # Utils
   pod 'PromisesSwift', '~> 1.2.8'
   
@@ -26,9 +29,11 @@ target 'SmootBox' do
     # Pods for testing
   end
 
-  target 'SmootBoxUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  
 
+end
+
+target 'SmootBoxUITests' do
+  inherit! :search_paths
+  # Pods for testing
 end

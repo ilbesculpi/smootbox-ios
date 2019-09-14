@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,8 +37,11 @@
 		19A712DF22CF660E003BADBE /* LandingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712DE22CF660E003BADBE /* LandingContracts.swift */; };
 		19A712E222CF69BC003BADBE /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E122CF69BC003BADBE /* UIColor_Extension.swift */; };
 		19A712E422CF6B99003BADBE /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A712E322CF6B99003BADBE /* String_Extension.swift */; };
+		19D70F7B232C68C000F6EC72 /* UIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7A232C68C000F6EC72 /* UIContainer.swift */; };
+		19D70F7D232C6C2700F6EC72 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */; };
+		19D70F80232C6C6400F6EC72 /* UIContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */; };
+		677351E81A9712378B5293BC /* libPods-SmootBoxUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B569C9C7438A3F5F5C63871 /* libPods-SmootBoxUITests.a */; };
 		B61F1F89D788509D5120F817 /* Pods_SmootBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */; };
-		CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */; };
 		E19955C38100EE2A82D05FCF /* Pods_SmootBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +98,10 @@
 		19A712DE22CF660E003BADBE /* LandingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContracts.swift; sourceTree = "<group>"; };
 		19A712E122CF69BC003BADBE /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		19A712E322CF6B99003BADBE /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
-		260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D70F7A232C68C000F6EC72 /* UIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContainer.swift; sourceTree = "<group>"; };
+		19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
+		19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContainerTests.swift; sourceTree = "<group>"; };
+		2B569C9C7438A3F5F5C63871 /* libPods-SmootBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmootBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5EA380C88D93C05B315D9 /* Pods-SmootBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxTests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxTests/Pods-SmootBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmootBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D4B53C7DC472E2B04A3FA1 /* Pods-SmootBoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmootBoxUITests.release.xcconfig"; path = "Target Support Files/Pods-SmootBoxUITests/Pods-SmootBoxUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE76497FBC10226241745175 /* Pods_SmootBoxUITests.framework in Frameworks */,
+				677351E81A9712378B5293BC /* libPods-SmootBoxUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +212,7 @@
 		196139902279E17700BE6FD1 /* SmootBoxTests */ = {
 			isa = PBXGroup;
 			children = (
+				19D70F7E232C6C5600F6EC72 /* UI */,
 				196139912279E17700BE6FD1 /* SmootBoxTests.swift */,
 				196139932279E17700BE6FD1 /* Info.plist */,
 			);
@@ -224,6 +231,7 @@
 		196139AE2279F38E00BE6FD1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				19D70F7A232C68C000F6EC72 /* UIContainer.swift */,
 				19A712DC22CF6594003BADBE /* Landing */,
 				196139B02279F39E00BE6FD1 /* CityList */,
 				196139AF2279F39800BE6FD1 /* Controllers */,
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				196139B12279F3C400BE6FD1 /* LandingViewController.swift */,
+				19D70F7C232C6C2700F6EC72 /* LandingPresenter.swift */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -303,6 +312,14 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		19D70F7E232C6C5600F6EC72 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				19D70F7F232C6C6400F6EC72 /* UIContainerTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		5B2DB9A1E6075E1DB3BAA8F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +338,7 @@
 			children = (
 				4191760CD1F3D72354838A9D /* Pods_SmootBox.framework */,
 				CD1CEB15F7E0D2827A221A95 /* Pods_SmootBoxTests.framework */,
-				260D5F4EBC7FF5BD5904D346 /* Pods_SmootBoxUITests.framework */,
+				2B569C9C7438A3F5F5C63871 /* libPods-SmootBoxUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -556,9 +573,11 @@
 				19289B3422CE1241005A3C27 /* BaseFirebaseService.swift in Sources */,
 				194C6984227C9981001971A5 /* CityListPresenter.swift in Sources */,
 				194C6988227C9A37001971A5 /* City.swift in Sources */,
+				19D70F7D232C6C2700F6EC72 /* LandingPresenter.swift in Sources */,
 				19A712E422CF6B99003BADBE /* String_Extension.swift in Sources */,
 				196139B82279F92600BE6FD1 /* AppError.swift in Sources */,
 				19437E56229190CA00331984 /* UIImageView_Extension.swift in Sources */,
+				19D70F7B232C68C000F6EC72 /* UIContainer.swift in Sources */,
 				194C698B227C9ABB001971A5 /* CityFirebaseService.swift in Sources */,
 				19289B2B22CD9986005A3C27 /* Wireframe.swift in Sources */,
 				196139B22279F3C400BE6FD1 /* LandingViewController.swift in Sources */,
@@ -580,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				196139922279E17700BE6FD1 /* SmootBoxTests.swift in Sources */,
+				19D70F80232C6C6400F6EC72 /* UIContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Properties
     
     var window: UIWindow?
+    
+    var container: Container = UIContainer.defaultContainer;
     
     private var _user: User?
     
@@ -33,13 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Override point for customization after application launch.
-        configureAppearance();
-        configureFirebase();
+        // Bootstrap app
+        bootstrap();
         
         // configure initial controller
-        let rootController = Wireframe.landingController();
-        
+        let rootController = configureRootController();
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.rootViewController = rootController;
         window?.makeKeyAndVisible();
@@ -48,7 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    // MARK: - Appearance
+    // MARK: - Bootstrap
+    
+    func bootstrap() {
+        configureAppearance();
+        configureFirebase();
+    }
     
     private func configureAppearance() {
         UINavigationBar.appearance().barTintColor = UIColor.primaryDarkColor;
@@ -67,6 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // MARK: - UI Navigation
+    
+    func configureRootController() -> UIViewController {
+        let controller = container.resolve(LandingViewController.self)!
+        return controller;
+    }
     
     func setRootController(_ controller: UIViewController) {
         self.window?.rootViewController = controller;

@@ -17,7 +17,7 @@ class Wireframe {
     }
     
     static func landingController() -> LandingViewController {
-        let view = UIStoryboard.Scene.Home.Landing;
+        let view = UIStoryboard.Scene.Home.landing;
         return view;
     }
     

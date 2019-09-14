@@ -2,8 +2,7 @@
 //  LandingViewController.swift
 //  SmootBox
 //
-//  Created by Ilbert Esculpi on 5/1/19.
-//  Copyright © 2019 SmootBox. All rights reserved.
+//  Landing View
 //
 
 import UIKit
@@ -11,6 +10,17 @@ import Firebase
 import Promises
 
 class LandingViewController: BaseViewController {
+    
+    
+    // MARK: - Properties
+    var presenter: LandingPresenter!
+    
+    
+    // MARK: - Initialization
+    
+    deinit {
+        self.presenter = nil;
+    }
 
     
     // MARK: - UIViewController
